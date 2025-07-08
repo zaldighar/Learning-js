@@ -1,13 +1,9 @@
-function show(){
-var functionVar = "I'm a block-scoped var";
-let functionLet = "I'm a block-scoped let";
-const functionConst = "I'm a block-scoped const";
+let length;
+let width;
+
+function calculateArea(){
+    length = parseFloat(document.getElementById("length").value);
+    width = parseFloat(document.getElementById("width").value);
+    let area = length * width;
+     document.getElementById('result').innerText = `The area of the rectangle is: ${area}`;
 }
-show();
-
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
-
-// console.log(blockVar);
-// console.log(blockLet);
